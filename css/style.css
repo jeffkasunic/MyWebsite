@@ -647,6 +647,9 @@ button:focus-visible {
   filter: grayscale(25%);
   transition: filter 0.25s ease;
 }
+/* Landscape (16:9) variant, roughly the same visual area as the 2:3 posters */
+.poster--wide { width: 9.5rem; }
+.poster--wide .poster__frame { aspect-ratio: 16 / 9; }
 .poster:hover .poster__frame img { filter: grayscale(0%); }
 .poster figcaption {
   margin-top: 0.4rem;

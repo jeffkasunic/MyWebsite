@@ -10,6 +10,9 @@ DreamWorks Animation (2022-2023)
   puss-in-boots-the-last-wish.jpg
   trolls-band-together.jpg
 
+Zoic Studios (2021-2022)
+  for-all-mankind.jpg
+
 DreamWorks Animation (2018-2021)
   how-to-train-your-dragon-3.jpg
   abominable.jpg
@@ -46,10 +49,10 @@ ESC Entertainment (2003)
   the-matrix-reloaded.jpg
   the-matrix-revolutions.jpg
 
-Not included: For All Mankind, Fox Sports, VR projects, the Blur Studio
-commercial/game trailers, and Merry Madagascar -- none of these have a
-theatrical movie poster, so those entries keep a plain text credit line
-instead of a poster row.
+Not included: Fox Sports, VR projects, the Blur Studio commercial/game
+trailers, and Merry Madagascar -- none of these have a theatrical movie
+poster, so those entries keep a plain text credit line instead of a
+poster row.
 
 Renamed since the last version (delete any old files using these old names):
   croods-2.jpg           -> croods-a-new-age.jpg
