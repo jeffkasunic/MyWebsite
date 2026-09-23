@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer Projects — Jeff Kasunic</title>
+<meta name="description" content="Pipeline tools, generative workflows, and developer projects by Jeff Kasunic.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="index.html" class="site-nav__mark">JEFF<span class="dot">.</span></a>
+  <nav class="site-nav__links">
+    <a href="index.html">Home</a>
+    <a href="film-vfx.html">Film &amp; VFX</a>
+    <a href="photography.html">Photography</a>
+    <a href="music.html">Music</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="about.html">About</a>
+  </nav>
+  <button class="site-nav__toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <div class="page-head">
+    <h1>Developer Projects</h1>
+    <p>Pipeline tools built in production, generative workflows, and personal experiments.</p>
+  </div>
+
+  <section class="section section--projects">
+    <ul class="project-list">
+
+      <li class="project-list__item">
+        <div class="project-list__head">
+          <h3>Previs Shot Automation Tool</h3>
+        </div>
+        <p>A Python tool, integrated via UMG in Unreal, that automates Sequencer structure,
+          camera creation, frame ranges, and FPS — standardizing previs shot setup and
+          reducing manual overhead. Built at LAIKA Studios for <em>Wildwood</em>; code is studio-owned.</p>
+        <ul class="tag-list">
+          <li>Python</li><li>Unreal Engine</li><li>UMG</li>
+        </ul>
+      </li>
+
+      <li class="project-list__item">
+        <div class="project-list__head">
+          <h3>Unreal ↔ Houdini USD Bridge</h3>
+        </div>
+        <p>A Python tool exporting real-time lighting setups from Unreal Engine into Houdini
+          via USD, bridging real-time and offline pipelines. Built at DreamWorks; contributed
+          to work recognized with the studio's 2023 Technical Achievement Award. Code is studio-owned.</p>
+        <ul class="tag-list">
+          <li>Python</li><li>USD</li><li>Houdini</li><li>Unreal Engine</li>
+        </ul>
+      </li>
+
+      <li class="project-list__item">
+        <div class="project-list__head">
+          <h3>Generative VFX Workflows</h3>
+        </div>
+        <p>Node-based ComfyUI workflows for image generation, conditioning, inpainting, and
+          controlled generation — exploring GenAI as part of an artist-driven visual
+          storytelling pipeline.</p>
+        <ul class="tag-list">
+          <li>ComfyUI</li><li>Stable Diffusion</li>
+        </ul>
+      </li>
+
+      <li class="project-list__item">
+        <div class="project-list__head">
+          <h3>Procedural Graphics Experiments</h3>
+          <!-- EDIT: replace with a real personal project, or remove this entry -->
+          <div class="project-list__links">
+            <a href="#">Repo</a>
+          </div>
+        </div>
+        <p><!-- EDIT: describe a personal graphics/rendering or creative-coding project -->
+          Small personal experiments in procedural rendering outside of a full studio pipeline.</p>
+        <ul class="tag-list">
+          <li>Python</li><li>OpenGL</li>
+        </ul>
+      </li>
+
+      <li class="project-list__item">
+        <div class="project-list__head">
+          <h3>This Site</h3>
+          <div class="project-list__links">
+            <a href="#">Repo</a>
+          </div>
+        </div>
+        <p>Static HTML/CSS/JS portfolio — no build step, no external dependencies.</p>
+        <ul class="tag-list">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        </ul>
+      </li>
+
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Jeff Kasunic</p>
+  <p>This website protects your privacy and will never track you. All analytics removed from the universe.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
