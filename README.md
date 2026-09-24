@@ -11,12 +11,14 @@ index.html          Home — hero, selected credits, links to the other pages
 film-vfx.html        Film & VFX — skills and full experience timeline
 photography.html     Photography — image grid
 music.html           Music Composition — click-to-load SoundCloud player
-projects.html        Developer Projects — pipeline tools and personal work
+writing.html         Writing — science fiction & fantasy novels, with cover, status, and synopsis
+projects.html        Development Projects — pipeline tools and personal work
 about.html           About — bio, education, contact
 css/style.css         shared styling for every page
 js/main.js            shared nav toggle + footer year
 assets/photography/  put your real photos here
 assets/reel/          put a self-hosted reel video here, if you want one
+assets/books/         book cover images for writing.html
 ```
 
 Each page repeats the same `<header class="site-nav">` and `<footer>` markup
