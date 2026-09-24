@@ -610,6 +610,8 @@ button:focus-visible {
   border-bottom: 1px solid transparent;
 }
 .contact-list a:hover { border-color: var(--amber); }
+.contact { max-width: var(--max-w); margin: 0 auto; }
+.contact .contact-list { margin-top: 0; }
 
 /* ==========================================================================
    Page head — the sub-page equivalent of the hero, without the full-screen
@@ -679,7 +681,10 @@ button:focus-visible {
 /* ==========================================================================
    Experience timeline (Film & VFX)
    ========================================================================== */
-.section__head:has(+ .timeline) { margin-bottom: 0; }
+.section__head:has(+ .timeline),
+.section__head:has(+ .info-grid),
+.section__head:has(+ .contact) { margin-bottom: 0; }
+.section__head + .info-grid { margin-top: 0; }
 .timeline { max-width: var(--max-w); margin: 0 auto; }
 .timeline__item {
   padding: var(--space-3) 0;
