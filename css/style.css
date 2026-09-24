@@ -168,6 +168,8 @@ button:focus-visible {
   object-fit: cover;
   object-position: center 40%;
 }
+/* Poster collage is busy and bright, so knock it back behind the text */
+.hero__bg--collage { object-position: center; filter: brightness(0.55) saturate(0.85); }
 /* Darken the lower-left so the title stays legible over the photo */
 .hero::before {
   content: "";
@@ -560,16 +562,33 @@ button:focus-visible {
 /* ==========================================================================
    Selected credits line (Home)
    ========================================================================== */
-.credit-line {
+.intro {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: var(--space-3) var(--space-3) var(--space-4);
+  padding: var(--space-3) var(--space-3) 4.5rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.intro__photo {
+  flex: none;
+  width: 285px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--hairline);
+}
+@media (max-width: 720px) {
+  .intro { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+}
+.credit-line {
+  max-width: none;
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   line-height: 1.8;
   color: var(--bone-dim);
 }
 .credit-line strong { color: var(--bone); font-weight: 600; }
-.credit-line + .section { padding-top: 0; border-top: none; }
+.intro + .section { padding-top: 0; border-top: none; }
+
 
 /* ==========================================================================
    Skills grid (Film & VFX)
