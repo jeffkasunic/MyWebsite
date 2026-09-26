@@ -169,7 +169,7 @@ button:focus-visible {
   object-position: center 40%;
 }
 /* Poster collage is busy and bright, so knock it back behind the text */
-.hero__bg--collage { object-position: center; filter: brightness(0.55) saturate(0.85); }
+.hero__bg--colorcorrect { object-position: center; filter: brightness(0.75) saturate(0.85); }
 /* Darken the top so the nav stays legible, and the lower-left so the title does */
 .hero::before {
   content: "";
