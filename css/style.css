@@ -642,12 +642,23 @@ button:focus-visible {
   align-items: center;
   gap: var(--space-4);
 }
-.intro__photo {
+.intro__figure {
   flex: none;
   width: 285px;
   max-width: 100%;
+  margin: 0;
+}
+.intro__photo {
+  display: block;
+  width: 100%;
   height: auto;
   border: 1px solid var(--hairline);
+}
+.intro__figure figcaption {
+  margin-top: var(--space-1);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
 }
 @media (max-width: 720px) {
   .intro { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
