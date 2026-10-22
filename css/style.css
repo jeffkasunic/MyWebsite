@@ -354,6 +354,98 @@ button:focus-visible {
 .track__desc a { color: var(--bone); border-bottom: 1px solid var(--amber); }
 .track__desc a:hover { color: var(--amber); }
 
+/* Music page: the two lights of the palette split the page — amber (tungsten)
+   for live recordings, cyan (cool key light) for electronic/studio work */
+.section--live { --accent: var(--amber); }
+.section--electronic { --accent: var(--cyan); }
+
+.page-head--music {
+  background: radial-gradient(closest-side at 40% 50%, rgba(201, 138, 75, 0.14), transparent);
+}
+/* A short five-line staff under the title */
+.page-head--music h1::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 17px;
+  margin-top: var(--space-2);
+  background: repeating-linear-gradient(to bottom, var(--amber) 0 1px, transparent 1px 4px);
+  opacity: 0.7;
+}
+
+.section__eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent, var(--amber));
+  margin: 0 0 var(--space-1);
+}
+
+.section--live .tracks,
+.section--electronic .tracks { counter-reset: track; }
+.section--live .player__frame--track,
+.section--electronic .player__frame--track {
+  position: relative;
+  border-top: 2px solid var(--accent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 18%, var(--panel)), var(--panel) 65%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+/* Faint waveform behind the play button; gone once the real player loads */
+.section--live .player__frame--track::before,
+.section--electronic .player__frame--track::before {
+  content: "";
+  position: absolute;
+  inset: 25% var(--space-3);
+  background: var(--accent);
+  opacity: 0.18;
+  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 40' preserveAspectRatio='none'><rect x='0' y='12.9' width='2' height='14.3' rx='1'/><rect x='3' y='13.1' width='2' height='13.9' rx='1'/><rect x='6' y='8.6' width='2' height='22.7' rx='1'/><rect x='9' y='12.2' width='2' height='15.7' rx='1'/><rect x='12' y='9.7' width='2' height='20.5' rx='1'/><rect x='15' y='11.5' width='2' height='16.9' rx='1'/><rect x='18' y='12.9' width='2' height='14.1' rx='1'/><rect x='21' y='7.6' width='2' height='24.7' rx='1'/><rect x='24' y='8.1' width='2' height='23.8' rx='1'/><rect x='27' y='4.3' width='2' height='31.3' rx='1'/><rect x='30' y='8.1' width='2' height='23.7' rx='1'/><rect x='33' y='10.8' width='2' height='18.5' rx='1'/><rect x='36' y='10.3' width='2' height='19.4' rx='1'/><rect x='39' y='6.8' width='2' height='26.4' rx='1'/><rect x='42' y='8.5' width='2' height='23.0' rx='1'/><rect x='45' y='5.1' width='2' height='29.9' rx='1'/><rect x='48' y='2.0' width='2' height='36.1' rx='1'/><rect x='51' y='2.1' width='2' height='35.8' rx='1'/><rect x='54' y='7.8' width='2' height='24.5' rx='1'/><rect x='57' y='10.8' width='2' height='18.5' rx='1'/><rect x='60' y='6.4' width='2' height='27.2' rx='1'/><rect x='63' y='10.7' width='2' height='18.6' rx='1'/><rect x='66' y='4.1' width='2' height='31.9' rx='1'/><rect x='69' y='8.4' width='2' height='23.3' rx='1'/><rect x='72' y='11.1' width='2' height='17.7' rx='1'/><rect x='75' y='13.1' width='2' height='13.9' rx='1'/><rect x='78' y='12.6' width='2' height='14.9' rx='1'/><rect x='81' y='9.3' width='2' height='21.4' rx='1'/><rect x='84' y='13.7' width='2' height='12.6' rx='1'/><rect x='87' y='10.0' width='2' height='20.0' rx='1'/><rect x='90' y='8.6' width='2' height='22.9' rx='1'/><rect x='93' y='10.1' width='2' height='19.8' rx='1'/><rect x='96' y='9.7' width='2' height='20.6' rx='1'/><rect x='99' y='13.6' width='2' height='12.9' rx='1'/><rect x='102' y='12.8' width='2' height='14.4' rx='1'/><rect x='105' y='9.4' width='2' height='21.2' rx='1'/><rect x='108' y='3.6' width='2' height='32.8' rx='1'/><rect x='111' y='4.4' width='2' height='31.3' rx='1'/><rect x='114' y='6.7' width='2' height='26.7' rx='1'/><rect x='117' y='7.6' width='2' height='24.7' rx='1'/><rect x='120' y='10.2' width='2' height='19.7' rx='1'/><rect x='123' y='10.1' width='2' height='19.7' rx='1'/><rect x='126' y='3.8' width='2' height='32.4' rx='1'/><rect x='129' y='1.8' width='2' height='36.4' rx='1'/><rect x='132' y='4.6' width='2' height='30.8' rx='1'/><rect x='135' y='4.9' width='2' height='30.3' rx='1'/><rect x='138' y='8.3' width='2' height='23.3' rx='1'/><rect x='141' y='7.6' width='2' height='24.7' rx='1'/><rect x='144' y='7.9' width='2' height='24.2' rx='1'/><rect x='147' y='9.0' width='2' height='22.0' rx='1'/><rect x='150' y='3.3' width='2' height='33.4' rx='1'/><rect x='153' y='9.7' width='2' height='20.6' rx='1'/><rect x='156' y='9.5' width='2' height='20.9' rx='1'/><rect x='159' y='8.9' width='2' height='22.1' rx='1'/><rect x='162' y='13.7' width='2' height='12.7' rx='1'/><rect x='165' y='11.5' width='2' height='16.9' rx='1'/><rect x='168' y='14.5' width='2' height='11.0' rx='1'/><rect x='171' y='9.2' width='2' height='21.5' rx='1'/><rect x='174' y='7.6' width='2' height='24.9' rx='1'/><rect x='177' y='8.7' width='2' height='22.5' rx='1'/><rect x='180' y='7.5' width='2' height='24.9' rx='1'/><rect x='183' y='11.9' width='2' height='16.3' rx='1'/><rect x='186' y='8.4' width='2' height='23.2' rx='1'/><rect x='189' y='6.5' width='2' height='26.9' rx='1'/></svg>") center / 100% 100% no-repeat;
+          mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 40' preserveAspectRatio='none'><rect x='0' y='12.9' width='2' height='14.3' rx='1'/><rect x='3' y='13.1' width='2' height='13.9' rx='1'/><rect x='6' y='8.6' width='2' height='22.7' rx='1'/><rect x='9' y='12.2' width='2' height='15.7' rx='1'/><rect x='12' y='9.7' width='2' height='20.5' rx='1'/><rect x='15' y='11.5' width='2' height='16.9' rx='1'/><rect x='18' y='12.9' width='2' height='14.1' rx='1'/><rect x='21' y='7.6' width='2' height='24.7' rx='1'/><rect x='24' y='8.1' width='2' height='23.8' rx='1'/><rect x='27' y='4.3' width='2' height='31.3' rx='1'/><rect x='30' y='8.1' width='2' height='23.7' rx='1'/><rect x='33' y='10.8' width='2' height='18.5' rx='1'/><rect x='36' y='10.3' width='2' height='19.4' rx='1'/><rect x='39' y='6.8' width='2' height='26.4' rx='1'/><rect x='42' y='8.5' width='2' height='23.0' rx='1'/><rect x='45' y='5.1' width='2' height='29.9' rx='1'/><rect x='48' y='2.0' width='2' height='36.1' rx='1'/><rect x='51' y='2.1' width='2' height='35.8' rx='1'/><rect x='54' y='7.8' width='2' height='24.5' rx='1'/><rect x='57' y='10.8' width='2' height='18.5' rx='1'/><rect x='60' y='6.4' width='2' height='27.2' rx='1'/><rect x='63' y='10.7' width='2' height='18.6' rx='1'/><rect x='66' y='4.1' width='2' height='31.9' rx='1'/><rect x='69' y='8.4' width='2' height='23.3' rx='1'/><rect x='72' y='11.1' width='2' height='17.7' rx='1'/><rect x='75' y='13.1' width='2' height='13.9' rx='1'/><rect x='78' y='12.6' width='2' height='14.9' rx='1'/><rect x='81' y='9.3' width='2' height='21.4' rx='1'/><rect x='84' y='13.7' width='2' height='12.6' rx='1'/><rect x='87' y='10.0' width='2' height='20.0' rx='1'/><rect x='90' y='8.6' width='2' height='22.9' rx='1'/><rect x='93' y='10.1' width='2' height='19.8' rx='1'/><rect x='96' y='9.7' width='2' height='20.6' rx='1'/><rect x='99' y='13.6' width='2' height='12.9' rx='1'/><rect x='102' y='12.8' width='2' height='14.4' rx='1'/><rect x='105' y='9.4' width='2' height='21.2' rx='1'/><rect x='108' y='3.6' width='2' height='32.8' rx='1'/><rect x='111' y='4.4' width='2' height='31.3' rx='1'/><rect x='114' y='6.7' width='2' height='26.7' rx='1'/><rect x='117' y='7.6' width='2' height='24.7' rx='1'/><rect x='120' y='10.2' width='2' height='19.7' rx='1'/><rect x='123' y='10.1' width='2' height='19.7' rx='1'/><rect x='126' y='3.8' width='2' height='32.4' rx='1'/><rect x='129' y='1.8' width='2' height='36.4' rx='1'/><rect x='132' y='4.6' width='2' height='30.8' rx='1'/><rect x='135' y='4.9' width='2' height='30.3' rx='1'/><rect x='138' y='8.3' width='2' height='23.3' rx='1'/><rect x='141' y='7.6' width='2' height='24.7' rx='1'/><rect x='144' y='7.9' width='2' height='24.2' rx='1'/><rect x='147' y='9.0' width='2' height='22.0' rx='1'/><rect x='150' y='3.3' width='2' height='33.4' rx='1'/><rect x='153' y='9.7' width='2' height='20.6' rx='1'/><rect x='156' y='9.5' width='2' height='20.9' rx='1'/><rect x='159' y='8.9' width='2' height='22.1' rx='1'/><rect x='162' y='13.7' width='2' height='12.7' rx='1'/><rect x='165' y='11.5' width='2' height='16.9' rx='1'/><rect x='168' y='14.5' width='2' height='11.0' rx='1'/><rect x='171' y='9.2' width='2' height='21.5' rx='1'/><rect x='174' y='7.6' width='2' height='24.9' rx='1'/><rect x='177' y='8.7' width='2' height='22.5' rx='1'/><rect x='180' y='7.5' width='2' height='24.9' rx='1'/><rect x='183' y='11.9' width='2' height='16.3' rx='1'/><rect x='186' y='8.4' width='2' height='23.2' rx='1'/><rect x='189' y='6.5' width='2' height='26.9' rx='1'/></svg>") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+.section--live .player__frame--track.is-loaded::before,
+.section--electronic .player__frame--track.is-loaded::before { display: none; }
+.section--live .track:hover .player__frame--track,
+.section--electronic .track:hover .player__frame--track {
+  transform: translateY(-3px);
+  box-shadow: 0 0.9rem 1.75rem rgba(0, 0, 0, 0.5);
+}
+@media (prefers-reduced-motion: reduce) {
+  .section--live .track:hover .player__frame--track,
+  .section--electronic .track:hover .player__frame--track { transform: none; }
+}
+.section--live .player__load,
+.section--electronic .player__load {
+  position: relative;
+  border-color: var(--accent);
+  background: rgba(56, 56, 56, 0.75);
+}
+.section--live .player__load::before,
+.section--electronic .player__load::before {
+  content: "\25B6";
+  color: var(--accent);
+  margin-right: 0.6em;
+  font-size: 0.8em;
+}
+.section--live .player__load:hover,
+.section--electronic .player__load:hover {
+  background: color-mix(in srgb, var(--accent) 45%, var(--void));
+}
+.section--live .track__title,
+.section--electronic .track__title { counter-increment: track; }
+.section--live .track__title::before,
+.section--electronic .track__title::before {
+  content: counter(track, decimal-leading-zero);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.75em;
+}
+.section--live .track__title a:hover,
+.section--electronic .track__title a:hover { color: var(--accent); }
+.section--live .track__desc a,
+.section--live .player__note a,
+.section--electronic .track__desc a { border-color: var(--accent); }
+
 /* ==========================================================================
    Writing
    ========================================================================== */
