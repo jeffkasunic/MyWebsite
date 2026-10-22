@@ -18,6 +18,7 @@
   --amber:       #c98a4b;
   --amber-dim:   #8a5f36;
   --cyan:        #7fa3ad;
+  --accent:      var(--amber); /* per-section light; .accent-cyan swaps it */
 
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 
@@ -358,20 +359,6 @@ button:focus-visible {
    for live recordings, cyan (cool key light) for electronic/studio work */
 .section--live { --accent: var(--amber); }
 .section--electronic { --accent: var(--cyan); }
-
-.page-head--music {
-  background: radial-gradient(closest-side at 40% 50%, rgba(201, 138, 75, 0.14), transparent);
-}
-/* A short five-line staff under the title */
-.page-head--music h1::after {
-  content: "";
-  display: block;
-  width: 5rem;
-  height: 17px;
-  margin-top: var(--space-2);
-  background: repeating-linear-gradient(to bottom, var(--amber) 0 1px, transparent 1px 4px);
-  opacity: 0.7;
-}
 
 .section__eyebrow {
   font-size: 0.75rem;
@@ -782,6 +769,66 @@ button:focus-visible {
 .page-head p a { color: var(--bone); border-bottom: 1px solid var(--amber); }
 .page-head p a:hover { color: var(--amber); }
 
+/* A soft pool of light behind each page title, plus a small motif under it
+   that hints at the page's subject */
+.page-head {
+  --head-glow: rgba(201, 138, 75, 0.14);
+  background: radial-gradient(closest-side at 40% 50%, var(--head-glow), transparent);
+}
+.page-head h1::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: var(--space-2);
+  background: var(--amber);
+  opacity: 0.8;
+}
+/* Music: a five-line staff */
+.page-head--music h1::after {
+  width: 5rem;
+  height: 17px;
+  background: repeating-linear-gradient(to bottom, var(--amber) 0 1px, transparent 1px 4px);
+  opacity: 0.7;
+}
+/* Film & VFX: a strip of film with sprocket holes */
+.page-head--film h1::after {
+  width: 6rem;
+  height: 10px;
+  background:
+    repeating-linear-gradient(to right, transparent 0 3px, var(--void) 3px 9px) center / 100% 4px no-repeat,
+    var(--amber);
+}
+/* Development: a blinking terminal cursor after the title */
+.page-head--dev h1::after {
+  display: inline-block;
+  width: 0.1em;
+  height: 0.85em;
+  margin: 0 0 0 0.12em;
+  vertical-align: -0.05em;
+  background: var(--amber);
+  animation: cursor-blink 1.1s steps(1) infinite;
+}
+@keyframes cursor-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .page-head--dev h1::after { animation: none; }
+}
+/* Photography: a warm-to-cool white-balance bar */
+.page-head--photo h1::after {
+  width: 7rem;
+  background: linear-gradient(to right, var(--amber), var(--bone-dim), var(--cyan));
+}
+/* Writing: three lines of text, the last one short */
+.page-head--writing h1::after {
+  width: 5rem;
+  height: 16px;
+  background:
+    linear-gradient(var(--amber), var(--amber)) 0 0 / 100% 2px no-repeat,
+    linear-gradient(var(--amber), var(--amber)) 0 7px / 85% 2px no-repeat,
+    linear-gradient(var(--amber), var(--amber)) 0 14px / 50% 2px no-repeat;
+}
+
+
 /* ==========================================================================
    Selected credits line (Home)
    ========================================================================== */
@@ -998,3 +1045,119 @@ button:focus-visible {
   background: var(--void);
 }
 .site-footer p { margin: 0 auto; font-size: 0.8rem; color: var(--muted); }
+
+/* ==========================================================================
+   Accent layer — each section takes one of the two lights
+   ========================================================================== */
+.accent-cyan { --accent: var(--cyan); }
+
+/* Short accent tick above section headings (music sections use an eyebrow instead) */
+.section__head h2:first-child::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin-bottom: var(--space-2);
+  background: var(--accent);
+}
+
+.tag-list li {
+  color: var(--bone-dim);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--hairline));
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+}
+
+/* Film & VFX */
+.reel__frame {
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.5);
+}
+.skills-grid__group {
+  padding-top: var(--space-2);
+  border-top: 1px solid color-mix(in srgb, var(--accent) 45%, var(--hairline));
+}
+.skills-grid__group h3 { color: var(--accent); }
+.timeline__dates { color: var(--accent); }
+.timeline__title { border-left: 2px solid var(--accent); }
+.timeline__bullets li::before { background: var(--accent); }
+.poster__frame {
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.poster:hover .poster__frame {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 0.9rem 1.75rem rgba(0, 0, 0, 0.5);
+}
+.info-grid h3 { color: var(--accent); }
+.info-grid > div {
+  padding-top: var(--space-2);
+  border-top: 1px solid color-mix(in srgb, var(--accent) 45%, var(--hairline));
+}
+
+/* Development projects and the Home index */
+.project-list__item {
+  transition: background-color 0.25s ease;
+}
+.project-list__item:hover {
+  background: linear-gradient(to right, color-mix(in srgb, var(--accent) 9%, transparent), transparent 70%);
+}
+.project-list--cols h3::before,
+.intro + .section .project-list__head h3::before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.6rem;
+  vertical-align: 0.12em;
+  background: var(--accent);
+}
+.project-list__shot img { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.project-list__shot:hover img {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 0.9rem 1.75rem rgba(0, 0, 0, 0.5);
+}
+
+/* Home: the page list alternates lights and gets a hover arrow */
+.intro + .section .project-list__item:nth-child(even) { --accent: var(--cyan); }
+.intro + .section .project-list__head h3 a { transition: color 0.2s ease; }
+.intro + .section .project-list__head h3 a::after {
+  content: "\2192";
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-0.4rem);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.intro + .section .project-list__item:hover h3 a { color: var(--accent); }
+.intro + .section .project-list__item:hover h3 a::after { opacity: 1; transform: none; }
+
+/* Photography */
+.photo-grid__link {
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.photo-grid__item:hover .photo-grid__link {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.55);
+}
+.photo-grid__item figcaption { transition: color 0.2s ease; }
+.photo-grid__item:hover figcaption { color: var(--amber); }
+
+/* Portrait (Home and About): an offset amber frame behind the photo */
+.intro__photo {
+  box-shadow: 10px 10px 0 -1px var(--amber-dim), 0 1rem 2.5rem rgba(0, 0, 0, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poster:hover .poster__frame,
+  .project-list__shot:hover img,
+  .photo-grid__item:hover .photo-grid__link,
+  .photo-grid__item:hover img { transform: none; }
+}
+
+/* Footer: both lights meeting along the top edge */
+.site-footer {
+  border-image: linear-gradient(to right, transparent, var(--amber-dim), var(--cyan), transparent) 1;
+}
