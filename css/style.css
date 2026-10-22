@@ -339,7 +339,10 @@ button:focus-visible {
 @media (max-width: 720px) {
   .tracks { grid-template-columns: minmax(0, 1fr); }
 }
-.player__frame--track { height: 166px; }
+.player__frame--track {
+  height: 166px;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.45);
+}
 .track__title {
   font-size: 1.1rem;
   font-weight: 500;
