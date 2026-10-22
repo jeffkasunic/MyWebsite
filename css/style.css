@@ -729,10 +729,11 @@ button:focus-visible {
 .about:has(.about__photo) {
   max-width: 56rem;
   display: grid;
-  grid-template-columns: 285px 1fr;
+  grid-template-columns: 310px 1fr;
   gap: var(--space-4);
   align-items: start;
 }
+.about .intro__figure { width: 310px; }
 @media (max-width: 720px) {
   .about:has(.about__photo) { grid-template-columns: 1fr; gap: var(--space-3); }
 }
@@ -808,9 +809,12 @@ button:focus-visible {
   border: 1px solid var(--hairline);
   box-shadow: 5px 5px 0 -1px var(--amber-dim), 0 1rem 2.5rem rgba(0, 0, 0, 0.45);
 }
-.page-head__zoom:hover .page-head__img { transform: translateY(-3px); }
+.page-head__zoom .intro__photo { transition: transform 0.2s ease; }
+.page-head__zoom:hover .page-head__img,
+.page-head__zoom:hover .intro__photo { transform: translateY(-3px); }
 @media (prefers-reduced-motion: reduce) {
-  .page-head__zoom:hover .page-head__img { transform: none; }
+  .page-head__zoom:hover .page-head__img,
+  .page-head__zoom:hover .intro__photo { transform: none; }
 }
 .page-head__figure figcaption {
   margin-top: calc(var(--space-1) + 10px); /* clear the offset frame */
