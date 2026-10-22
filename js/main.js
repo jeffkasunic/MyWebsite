@@ -31,11 +31,11 @@ document.querySelectorAll('.photo-grid__item img, .poster__frame img').forEach((
   }, { once: true });
 });
 
-// Lightbox: click a grid photo or project screenshot to view it enlarged, with
+// Lightbox: click a grid photo, project screenshot or page-head photo to view it enlarged, with
 // keyboard/click navigation between images. Project screenshots are links to
 // the full-size file, which the lightbox shows in place of the thumbnail.
 // No-ops on pages without a photo grid/screenshots or lightbox element.
-const photoButtons = Array.from(document.querySelectorAll('.photo-grid__link, .project-list__shot'));
+const photoButtons = Array.from(document.querySelectorAll('.photo-grid__link, .project-list__shot, .page-head__zoom'));
 const lightbox = document.getElementById('lightbox');
 
 if (photoButtons.length && lightbox) {
@@ -45,6 +45,12 @@ if (photoButtons.length && lightbox) {
   const prevBtn = lightbox.querySelector('.lightbox__prev');
   const nextBtn = lightbox.querySelector('.lightbox__next');
   let currentIndex = 0;
+
+  // Nothing to step through with a single image
+  if (photoButtons.length === 1) {
+    prevBtn.hidden = true;
+    nextBtn.hidden = true;
+  }
 
   function showPhoto(index) {
     currentIndex = (index + photoButtons.length) % photoButtons.length;

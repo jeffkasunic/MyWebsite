@@ -607,6 +607,7 @@ button:focus-visible {
   bottom: var(--space-3);
   left: 0;
   right: 0;
+  max-width: none;
   text-align: center;
   font-size: 0.85rem;
   color: var(--bone-dim);
@@ -790,6 +791,37 @@ button:focus-visible {
   height: 17px;
   background: repeating-linear-gradient(to bottom, var(--amber) 0 1px, transparent 1px 4px);
   opacity: 0.7;
+}
+/* Optional photo floated beside the page intro (Music) */
+.page-head:has(.page-head__figure)::after { content: ""; display: block; clear: both; }
+.page-head__figure {
+  float: right;
+  width: min(42%, 420px);
+  margin: 0 10px var(--space-2) var(--space-4);
+}
+.page-head__zoom { display: block; cursor: zoom-in; }
+.page-head__img {
+  display: block;
+  transition: transform 0.2s ease;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--hairline);
+  box-shadow: 10px 10px 0 -1px var(--amber-dim), 0 1rem 2.5rem rgba(0, 0, 0, 0.45);
+}
+.page-head__zoom:hover .page-head__img { transform: translateY(-3px); }
+@media (prefers-reduced-motion: reduce) {
+  .page-head__zoom:hover .page-head__img { transform: none; }
+}
+.page-head__figure figcaption {
+  margin-top: calc(var(--space-1) + 10px); /* clear the offset frame */
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.page-head__figure figcaption a { color: var(--bone-dim); border-bottom: 1px solid var(--amber); white-space: nowrap; }
+.page-head__figure figcaption a:hover { color: var(--amber); }
+@media (max-width: 720px) {
+  .page-head__figure { float: none; width: calc(100% - 10px); margin: 0 0 var(--space-3); }
 }
 /* Film & VFX: a strip of film with sprocket holes */
 .page-head--film h1::after {
