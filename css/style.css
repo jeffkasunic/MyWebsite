@@ -543,6 +543,7 @@ button:focus-visible {
 .section--projects + .section--projects,
 .page-head + .section--projects { padding-top: var(--space-4); }
 
+.section__head:has(+ .project-list) { margin-bottom: 0; }
 .project-list { max-width: var(--max-w); margin: 0 auto; }
 .project-list__item {
   padding: var(--space-3) 0;
