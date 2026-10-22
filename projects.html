@@ -29,81 +29,113 @@
 
   <div class="page-head">
     <h1>Development Projects</h1>
-    <p>This page is in progress and will be updated with my personal graphics experiments, generative AI workflows, and
-      procedural content generation work with Unreal and Houdini.
-      <br><br>
-      I am interested in exploring how AI can help us do our work more efficiently in VFX and animation.
+    <p>This page is in progress and will be updated with my personal graphics experiments, generative AI workflows,
+      web applications, and procedural content generation work with Unreal Engine and Houdini.
     </p>
   </div>
 
   <section class="section section--projects">
-    <ul class="project-list">
+    <ul class="project-list project-list--cols">
       
       <li class="project-list__item">
-        <div class="project-list__head">
-          <h3>Graphics Programming</h3>
-        </div>
-        <p><!-- EDIT: describe a personal graphics/rendering or creative-coding project -->
-          Small personal experiments in rendering outside of a full studio pipeline, both offline and real-time rendering.</p>
-        <ul class="tag-list">
-          <li>C++</li><li>OpenGL</li><li>SDL</li>
-        </ul>
-      </li>
-      
-      <li class="project-list__item">
-        <div class="project-list__head">
-          <h3>GenAI/ML for VFX</h3>
-        </div>
-        <p>ComfyUI workflows for image generation, conditioning, inpainting, and
-          controlled generation — exploring AI as part of an artist-driven visual
-          storytelling pipeline.</p>
-        <ul class="tag-list">
-          <li>ComfyUI</li><li>Stable Diffusion</li>
-        </ul>
-      </li>
-      
-      <li class="project-list__item">
-        <div class="project-list__head">
-          <h3>Unreal & Houdini - PCG</h3>
-        </div>
-        <p><!-- EDIT: describe a personal graphics/rendering or creative-coding project -->
-          Procedural Content Generation projects with Unreal Engine and Houdini for technical artist demos.</p>
-        <ul class="tag-list">
-          <li>Unreal</li><li>Houdini</li><li>Houdini Engine</li>
-        </ul>
-      </li>
-      
-      <li class="project-list__item">
-        <div class="project-list__head">
+        <div class="project-list__text">
           <h3>Logbook</h3>
-          <div class="project-list__links">
-            <a href="https://jeffkasunic.com/logbook/" target="_blank" rel="noopener">Live</a>
-            <a href="https://github.com/jeffkasunic/Logbook" target="_blank" rel="noopener">Repo</a>
-          </div>
+          <p>A daily time log by category, with weekly goals and a quarterly plan. A multi-user
+            web app where each account keeps its own private log on AWS. Try it as a guest
+            with sample data, no account needed.</p>
+          <ul class="tag-list">
+            <li>HTML</li><li>CSS</li><li>React</li><li>TypeScript</li><li>Amazon Cognito</li><li>Amazon API Gateway</li><li>AWS Lambda</li><li>Amazon DynamoDB</li>
+          </ul>
         </div>
-        <p>A daily time log by category, with weekly goals and a quarterly plan. A multi-user
-          web app where each account keeps its own private log on AWS. Try it as a guest
-          with sample data, no account needed.</p>
-        <ul class="tag-list">
-          <li>React</li><li>TypeScript</li><li>Amazon Cognito</li><li>Amazon API Gateway</li><li>AWS Lambda</li><li>Amazon DynamoDB</li>
-        </ul>
+        <a class="project-list__shot" href="assets/projects/Logbook_01.jpg" target="_blank">
+          <img src="assets/projects/Logbook_01_sm.jpg" width="640" height="360" alt="Logbook app showing a weekly time log by category" loading="lazy">
+        </a>
+        <div class="project-list__links">
+          <a href="https://jeffkasunic.com/logbook/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/jeffkasunic/Logbook" target="_blank" rel="noopener">Repo</a>
+        </div>
       </li>
 
       <li class="project-list__item">
-        <div class="project-list__head">
-          <h3>This Site</h3>
-          <div class="project-list__links">
-            <a href="https://github.com/jeffkasunic/MyWebsite" target="_blank" rel="noopener">Repo</a>
-          </div>
+        <div class="project-list__text">
+          <h3>Strata</h3>
+          <p>A 3D falling-block game in a six-by-six well.</p>
+          <p>A shared top-15 leaderboard runs on AWS: the game posts and fetches high scores
+            through Amazon API Gateway, with AWS Lambda functions saving and reading them from
+            Amazon DynamoDB.</p>
+          <ul class="tag-list">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Three.js</li><li>Amazon API Gateway</li><li>AWS Lambda</li><li>Amazon DynamoDB</li>
+          </ul>
         </div>
-        <p>Static HTML/CSS/JS portfolio.</p>
-        <ul class="tag-list">
-          <li>HTML</li><li>CSS</li><li>JavaScript</li>
-        </ul>
+        <a class="project-list__shot" href="assets/projects/Strata_02.jpg" target="_blank">
+          <img src="assets/projects/Strata_02_sm.jpg" width="640" height="360" alt="Strata game showing falling blocks in a 3D well" loading="lazy">
+        </a>
+        <div class="project-list__links">
+          <a href="https://jeffkasunic.com/strata/" target="_blank" rel="noopener">Live</a>
+        </div>
+      </li>
+
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>This Site</h3>
+          <p>My portfolio of film, photography, music, writing, and development work.</p>
+          <ul class="tag-list">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+        </div>
+        <a class="project-list__shot" href="assets/projects/MyWebsite.jpg" target="_blank">
+          <img src="assets/projects/MyWebsite_sm.jpg" width="640" height="360" alt="Home page of this site" loading="lazy">
+        </a>
+        <div class="project-list__links">
+          <a href="https://jeffkasunic.com/">Live</a>
+          <a href="https://github.com/jeffkasunic/MyWebsite" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </li>
+      
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>Graphics Programming</h3>
+          <p><!-- EDIT: describe a personal graphics/rendering or creative-coding project -->
+            Small personal experiments in rendering outside of a full studio pipeline, both offline and real-time rendering.</p>
+          <ul class="tag-list">
+            <li>C++</li><li>OpenGL</li><li>SDL</li>
+          </ul>
+        </div>
+      </li>
+      
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>Generative AI, Machine Learning</h3>
+          <p>ComfyUI workflows for image generation, conditioning, inpainting, and
+            controlled generation — exploring AI as part of an artist-driven visual
+            storytelling pipeline.</p>
+          <ul class="tag-list">
+            <li>ComfyUI</li><li>Stable Diffusion</li>
+          </ul>
+        </div>
+      </li>
+      
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>Unreal & Houdini - PCG</h3>
+          <p><!-- EDIT: describe a personal graphics/rendering or creative-coding project -->
+            Procedural Content Generation projects with Unreal Engine and Houdini for technical artist demos.</p>
+          <ul class="tag-list">
+            <li>Unreal</li><li>Houdini</li><li>Houdini Engine</li>
+          </ul>
+        </div>
       </li>
 
     </ul>
   </section>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" type="button" aria-label="Previous image">&lsaquo;</button>
+    <button class="lightbox__next" type="button" aria-label="Next image">&rsaquo;</button>
+    <img class="lightbox__img" src="" alt="">
+    <p class="lightbox__caption"></p>
+  </div>
 
 </main>
 

@@ -31,10 +31,11 @@ document.querySelectorAll('.photo-grid__item img, .poster__frame img').forEach((
   }, { once: true });
 });
 
-// Photography lightbox: click a grid photo to view it enlarged, with
-// keyboard/click navigation between photos. No-ops on pages without a
-// photo grid or lightbox element.
-const photoButtons = Array.from(document.querySelectorAll('.photo-grid__link'));
+// Lightbox: click a grid photo or project screenshot to view it enlarged, with
+// keyboard/click navigation between images. Project screenshots are links to
+// the full-size file, which the lightbox shows in place of the thumbnail.
+// No-ops on pages without a photo grid/screenshots or lightbox element.
+const photoButtons = Array.from(document.querySelectorAll('.photo-grid__link, .project-list__shot'));
 const lightbox = document.getElementById('lightbox');
 
 if (photoButtons.length && lightbox) {
@@ -49,8 +50,9 @@ if (photoButtons.length && lightbox) {
     currentIndex = (index + photoButtons.length) % photoButtons.length;
     const btn = photoButtons[currentIndex];
     const img = btn.querySelector('img');
-    const caption = btn.closest('figure').querySelector('figcaption');
-    lightboxImg.src = img.src;
+    const caption = btn.closest('figure')?.querySelector('figcaption')
+      ?? btn.closest('.project-list__item')?.querySelector('h3');
+    lightboxImg.src = btn.getAttribute('href') || img.src;
     lightboxImg.alt = img.alt;
     lightboxCaption.textContent = caption ? caption.textContent : '';
   }
@@ -69,7 +71,10 @@ if (photoButtons.length && lightbox) {
   }
 
   photoButtons.forEach((btn, i) => {
-    btn.addEventListener('click', () => openLightbox(i));
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLightbox(i);
+    });
   });
 
   closeBtn.addEventListener('click', closeLightbox);
