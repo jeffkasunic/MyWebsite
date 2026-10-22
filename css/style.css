@@ -599,6 +599,13 @@ button:focus-visible {
   border-radius: var(--radius);
 }
 .project-list__shot:hover img { border-color: var(--cyan); }
+/* Tablet: the fixed-max text column crowds the image, so share the row and widen the gutters */
+@media (min-width: 721px) and (max-width: 1200px) {
+  .project-list--cols .project-list__item {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 15rem) 4rem;
+    column-gap: var(--space-5);
+  }
+}
 @media (max-width: 720px) {
   .project-list--cols .project-list__item {
     grid-template-columns: 1fr;
