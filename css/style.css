@@ -272,7 +272,6 @@ button:focus-visible {
   margin-bottom: var(--space-2);
 }
 .section__intro { max-width: 34rem; }
-
 /* ==========================================================================
    Film & VFX
    ========================================================================== */
@@ -349,6 +348,8 @@ button:focus-visible {
 .track__title a { color: var(--bone); }
 .track__title a:hover { color: var(--amber); }
 .track__desc { color: var(--bone-dim); max-width: 40rem; margin: 0; }
+.track__desc a { color: var(--bone); border-bottom: 1px solid var(--amber); }
+.track__desc a:hover { color: var(--amber); }
 
 /* ==========================================================================
    Writing
@@ -683,6 +684,8 @@ button:focus-visible {
   letter-spacing: -0.02em;
 }
 .page-head p { margin-top: var(--space-2); font-size: 1.05rem; }
+.page-head p a { color: var(--bone); border-bottom: 1px solid var(--amber); }
+.page-head p a:hover { color: var(--amber); }
 
 /* ==========================================================================
    Selected credits line (Home)
