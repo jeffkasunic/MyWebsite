@@ -538,6 +538,10 @@ button:focus-visible {
    Developer projects — flat rows, no card/shadow kit
    ========================================================================== */
 .section--projects { background: var(--void); }
+/* Stacked project groups share a background, so tighten the gap */
+.section--projects:has(+ .section--projects) { padding-bottom: var(--space-4); }
+.section--projects + .section--projects,
+.page-head + .section--projects { padding-top: var(--space-4); }
 
 .project-list { max-width: var(--max-w); margin: 0 auto; }
 .project-list__item {
