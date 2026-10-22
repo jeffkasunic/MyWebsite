@@ -806,7 +806,7 @@ button:focus-visible {
   width: 100%;
   height: auto;
   border: 1px solid var(--hairline);
-  box-shadow: 10px 10px 0 -1px var(--amber-dim), 0 1rem 2.5rem rgba(0, 0, 0, 0.45);
+  box-shadow: 5px 5px 0 -1px var(--amber-dim), 0 1rem 2.5rem rgba(0, 0, 0, 0.45);
 }
 .page-head__zoom:hover .page-head__img { transform: translateY(-3px); }
 @media (prefers-reduced-motion: reduce) {
@@ -1179,7 +1179,7 @@ button:focus-visible {
 
 /* Portrait (Home and About): an offset amber frame behind the photo */
 .intro__photo {
-  box-shadow: 10px 10px 0 -1px var(--amber-dim), 0 1rem 2.5rem rgba(0, 0, 0, 0.45);
+  box-shadow: 5px 5px 0 -1px var(--amber-dim), 0 1rem 2.5rem rgba(0, 0, 0, 0.45);
 }
 
 @media (prefers-reduced-motion: reduce) {
