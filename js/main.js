@@ -40,8 +40,9 @@ if (photoTabs.length) {
 
   function selectTab(region) {
     photoTabs.forEach((tab) => tab.setAttribute('aria-pressed', String(tab.dataset.region === region)));
+    // Photos of me only appear under their own tab, never in All
     photoItems.forEach((item) => {
-      item.hidden = region !== 'all' && item.dataset.region !== region;
+      item.hidden = region === 'all' ? item.dataset.region === 'personal' : item.dataset.region !== region;
     });
   }
 

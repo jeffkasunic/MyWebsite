@@ -551,6 +551,8 @@ button:focus-visible {
 }
 .photo-tabs__tab:hover { color: var(--bone); border-color: var(--cyan); }
 .photo-tabs__tab[aria-pressed="true"] { color: var(--bone); border-color: var(--amber); }
+/* Personal sits apart from the places, pushed to the right edge */
+.photo-tabs__tab--end { margin-left: auto; }
 
 .photo-grid {
   max-width: var(--max-w);
