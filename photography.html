@@ -36,169 +36,321 @@
   </div>
 
   <section class="section section--photo">
+    <div class="photo-tabs" role="group" aria-label="Filter photos by place">
+      <button class="photo-tabs__tab" type="button" data-region="all" aria-pressed="true">All</button>
+      <button class="photo-tabs__tab" type="button" data-region="uk" aria-pressed="false">United Kingdom</button>
+      <button class="photo-tabs__tab" type="button" data-region="europe" aria-pressed="false">Europe</button>
+      <button class="photo-tabs__tab" type="button" data-region="india" aria-pressed="false">India</button>
+      <button class="photo-tabs__tab" type="button" data-region="egypt" aria-pressed="false">Egypt</button>
+      <button class="photo-tabs__tab" type="button" data-region="usa" aria-pressed="false">United States</button>
+    </div>
     <div class="photo-grid">
-      <!-- EDIT: update each caption and alt text as needed. -->
-      <figure class="photo-grid__item">
+      <!-- EDIT: update each caption and alt text as needed. data-region picks the tab: uk, europe, india, egypt, usa -->
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-TrafalgarSquare_03.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Trafalgar Square</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-TrafalgarSquare_01.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Trafalgar Square</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-TrafalgarSquare_02.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Trafalgar Square</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="europe">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/Belgium-Brussels.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>Brussels, Belgium</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-OxfordCircus.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Oxford Circus</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-Underground.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Underground</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="europe">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/Paris-Montmartre_01.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>Paris, Montmartre</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="europe">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/Paris-Montmartre_02.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>Paris, Montmartre</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="europe">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/Paris-Montmartre_03.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>Paris, Montmartre</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="europe">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/Paris-Montmartre_04.jpg" alt="A waitress serving diners outside a pink café on a sunny, tree-lined Montmartre street" loading="lazy">
         </button>
         <figcaption>Paris, Montmartre</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="india">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/India-AgraFort.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>Agra Fort, India</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/England-Countryside.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>Countryside, England</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="usa">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/LosAngeles-FarmersMarket.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>Los Angeles, Farmer's Market</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-TrafalgarSquare_04.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Trafalgar Square</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-CharingCrossRd.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Charing Cross Road</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-Chelsea_01.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Chelsea</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-Chelsea_02.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Chelsea</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-Chelsea_03.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Chelsea</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-TowerBridge-Olympics.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Tower Bridge during the Olympics</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-ShaftesburyAve.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Shaftesbury Avenue</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-OxfordCircus_01.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Oxford Circus</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="europe">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/Paris-SorbonneUniversity.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>Paris, Sorbonne</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="europe">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/Paris-CafeDelmas_01.jpg" alt="A waiter carrying a tray past a crowded café terrace on a busy Paris street" loading="lazy">
         </button>
         <figcaption>Paris, Café Delmas</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="europe">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/Paris-Pantheon_01.jpg" alt="A rain-slicked street lined with cafés leading to a Gothic church with a clock tower" loading="lazy">
         </button>
         <figcaption>Paris, Saint-Étienne-du-Mont</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="europe">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/Austria-Vienna.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>Vienna, Austria</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/Edinburgh-Scotland_01.jpg" alt="Two children standing on the Royal Mile in front of St Giles' Cathedral" loading="lazy">
         </button>
         <figcaption>Edinburgh, Scotland</figcaption>
       </figure>
-      <figure class="photo-grid__item">
+      <figure class="photo-grid__item" data-region="uk">
         <button class="photo-grid__link" type="button">
           <img src="assets/photography/London-Underground_02.jpg" alt="Add a description of this photo" loading="lazy">
         </button>
         <figcaption>London, Underground</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/Agra-TajMahal_01.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Agra, Taj Mahal</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/Agra-TajMahal_02.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Agra, Taj Mahal</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Mumbai_01.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Mumbai, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Bangalore_01.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Bangalore_03.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Bangalore_11.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Bangalore_14.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Bangalore_24.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Bangalore_29.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Bangalore_36.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Goa_10.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Goa_13.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Goa_16.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Goa_17.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Goa_18.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/India/India-Goa_20.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/Egypt/Egypt-Cairo_10.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/Egypt/Egypt-Cairo_29.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/Egypt/Egypt-Cairo_35.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/Egypt/Egypt-Cairo_49.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/Egypt/Egypt-Cairo_52.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/Egypt/Egypt-Cairo_54.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/Egypt/Egypt-Luxor_01.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Luxor, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <button class="photo-grid__link" type="button">
+          <img src="assets/photography/Egypt/Egypt-Luxor_02.jpg" alt="Add a description of this photo" loading="lazy">
+        </button>
+        <figcaption>Luxor, Egypt</figcaption>
       </figure>
     </div>
   </section>
