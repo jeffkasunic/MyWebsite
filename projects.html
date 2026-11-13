@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Development Projects — Jeff Kasunic</title>
+<meta name="description" content="Pipeline tools, generative workflows, and development projects by Jeff Kasunic.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css?v=20261111t">
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="index.html" class="site-nav__mark">JEFF<span class="dot">.</span></a>
+  <nav class="site-nav__links">
+    <a href="index.html">Home</a>
+    <a href="film-vfx.html">Film &amp; VFX</a>
+    <a href="projects.html" aria-current="page">Development</a>
+    <a href="mathematics.html">Mathematics</a>
+    <a href="photography.html">Photography</a>
+    <a href="music.html">Music</a>
+    <a href="writing.html">Writing</a>
+    <a href="about.html">About</a>
+  </nav>
+  <button class="site-nav__toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <div class="page-head page-head--dev">
+    <h1>Development Projects</h1>
+    <p>This page is in progress and will be updated with my personal graphics experiments, generative AI workflows,
+      web applications, and procedural content generation work with Unreal Engine and Houdini.
+    </p>
+  </div>
+
+  <section class="section section--projects accent-cyan">
+    <div class="section__head">
+      <h2>Web Projects</h2>
+    </div>
+
+    <ul class="project-list project-list--cols project-list--pairs">
+      <li class="project-list__item project-list__item--half" id="hyperslice">
+        <div class="project-list__text">
+          <h3>Hyperslice</h3>
+          <p>An interactive geometry lab for exploring the fourth spatial dimension.</p>
+          <p>It pairs a tesseract explorer with a primer on how slicing works. A live readout counts
+            each slice's vertices, edges, and faces, and presets jump to shapes like a tetrahedron,
+            octahedron, or hexagonal prism.</p>
+          <ul class="tag-list">
+            <li>TypeScript</li>
+          </ul>
+        </div>
+        <div class="project-list__shots">
+          <figure class="project-list__figure">
+            <a class="project-list__shot" href="assets/projects/Explorer.png" target="_blank">
+              <img src="assets/projects/Explorer_sm.jpg" width="640" height="360" alt="Hyperslice showing an 8-faced polyhedron cut from a rotated tesseract, with rotation and slice controls" loading="lazy">
+            </a>
+            <figcaption>
+              <span class="project-list__caption-title">Tesseract Explorer</span>
+              Rotate a tesseract in 4D and move a 3D slice along W to watch the cross-section change shape.
+            </figcaption>
+            <div class="project-list__links">
+              <a href="https://jeffkasunic.com/hyperslice/" target="_blank" rel="noopener" aria-label="Live: Tesseract Explorer">Live</a>
+              <a href="https://github.com/jeffkasunic/Hyperslice" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </figure>
+          <figure class="project-list__figure">
+            <a class="project-list__shot" href="assets/projects/Primer.png" target="_blank">
+              <img src="assets/projects/Primer_sm.jpg" width="640" height="360" alt="Hyperslice's How a slice works primer, showing a sphere passing through a wall and the circle the wall sees" loading="lazy">
+            </a>
+            <figcaption>
+              <span class="project-list__caption-title">How a slice works</span>
+              The same idea one dimension down: a sphere passes through a wall, and the wall sees only a circle.
+            </figcaption>
+            <div class="project-list__links">
+              <a href="https://jeffkasunic.com/hyperslice/#primer" target="_blank" rel="noopener" aria-label="Live: How a slice works">Live</a>
+              <a href="https://github.com/jeffkasunic/Hyperslice" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </figure>
+        </div>
+      </li>
+
+      <li class="project-list__item project-list__item--half" id="platonic-solids">
+        <div class="project-list__text">
+          <h3>Platonic Solids in Higher Dimensions</h3>
+          <p>An interactive article that follows the most symmetrical shapes from a single point up
+            through every dimension.</p>
+          <p>Fold polygons into the five Platonic solids, turn the six regular 4D polychora through W,
+            and see why every dimension from 5D up has exactly three.</p>
+          <ul class="tag-list">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="project-list__shots">
+          <figure class="project-list__figure">
+            <a class="project-list__shot" href="assets/projects/PlatonicSolids.png" target="_blank">
+              <img src="assets/projects/PlatonicSolids_sm.jpg" width="640" height="360" alt="Platonic Solids in Higher Dimensions article, with the five Platonic solids as glowing wireframes and a count of regular polytopes in each dimension" loading="lazy">
+            </a>
+            <figcaption>
+              <span class="project-list__caption-title">From a point to every dimension</span>
+              The count of regular convex polytopes in each dimension.
+            </figcaption>
+            <div class="project-list__links">
+              <a href="mathematics/platonic-solids.html">Live</a>
+              <a href="https://github.com/jeffkasunic/MyWebsite/blob/main/mathematics/platonic-solids.html" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </figure>
+        </div>
+      </li>
+
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>Strata</h3>
+          <p>A 3D falling-block game in a six-by-six well.</p>
+          <p>The camera orbits freely: drag to rotate, pan, and zoom (or use touch gestures).</p>
+          <p>A shared top-15 leaderboard runs on AWS: the game posts and fetches high scores
+            through Amazon API Gateway, with AWS Lambda functions saving and reading them from
+            Amazon DynamoDB.</p>
+          <ul class="tag-list">
+            <li>JavaScript</li><li>Three.js</li><li>Amazon API Gateway</li><li>AWS Lambda</li><li>Amazon DynamoDB</li>
+          </ul>
+        </div>
+        <a class="project-list__shot" href="assets/projects/Strata_02.jpg" target="_blank">
+          <img src="assets/projects/Strata_02_sm.jpg" width="640" height="360" alt="Strata game showing falling blocks in a 3D well" loading="lazy">
+        </a>
+        <div class="project-list__links">
+          <a href="https://jeffkasunic.com/strata/" target="_blank" rel="noopener">Live</a>
+        </div>
+      </li>
+
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>Logbook</h3>
+          <p>A daily time log by category, with weekly goals and a quarterly plan. A multi-user
+            web app where each account keeps its own private log on AWS.
+          </p>
+          <p>Try it as a guest with sample data, no account needed.</p>
+          <ul class="tag-list">
+            <li>React</li><li>TypeScript</li><li>Amazon Cognito</li><li>Amazon API Gateway</li><li>AWS Lambda</li><li>Amazon DynamoDB</li>
+          </ul>
+        </div>
+        <a class="project-list__shot" href="assets/projects/Logbook_01.jpg" target="_blank">
+          <img src="assets/projects/Logbook_01_sm.jpg" width="640" height="360" alt="Logbook app showing a weekly time log by category" loading="lazy">
+        </a>
+        <div class="project-list__links">
+          <a href="https://jeffkasunic.com/logbook/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/jeffkasunic/Logbook" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </li>
+
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>This Site</h3>
+          <p>My portfolio of film, photography, music, writing, mathematics, and development work.</p>
+          <ul class="tag-list">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+        </div>
+        <a class="project-list__shot" href="assets/projects/MyWebsite.jpg" target="_blank">
+          <img src="assets/projects/MyWebsite_sm.jpg" width="640" height="360" alt="Home page of this site" loading="lazy">
+        </a>
+        <div class="project-list__links">
+          <a href="https://jeffkasunic.com/">Live</a>
+          <a href="https://github.com/jeffkasunic/MyWebsite" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="section section--projects">
+    <div class="section__head">
+      <h2>Generative AI</h2>
+    </div>
+
+    <ul class="project-list project-list--cols">
+
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>ComfyUI Workflows for VFX</h3>
+          <p>ComfyUI workflows for image generation, conditioning, inpainting, and
+            controlled generation — exploring AI as part of an artist-driven visual
+            storytelling pipeline.</p>
+          <ul class="tag-list">
+            <li>ComfyUI</li><li>Stable Diffusion</li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="section section--projects accent-cyan">
+    <div class="section__head">
+      <h2>Graphics Programming</h2>
+    </div>
+
+    <ul class="project-list project-list--cols">
+
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>Ray Tracer</h3>
+          <p>A C++ ray tracer built from scratch by working through Peter Shirley's <em>Ray Tracing in One Weekend</em> book series: <em>In One Weekend</em>, <em>The Next Week</em>, and <em>The Rest of Your Life</em>. Covers materials, motion blur, BVH acceleration, textures, lights, and Monte Carlo importance sampling.</p>
+          <ul class="tag-list">
+            <li>C++</li><li>Ray Tracing</li><li>Path Tracing</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>Audio-Visual Synthesizer</h3>
+          <p><!-- EDIT: final name, tech, and links once built -->
+            An in-progress project combining real-time audio synthesis with generative graphics,
+            where sound and image are driven by the same set of parameters. Tweaking a filter or
+            envelope reshapes the visuals, and the visuals can feed back into the sound.</p>
+          <ul class="tag-list">
+            <li>Audio Synthesis</li><li>Real-Time Graphics</li><li>Generative Art</li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="section section--projects">
+    <div class="section__head">
+      <h2>Technical Art</h2>
+    </div>
+
+    <ul class="project-list project-list--cols">
+
+      <li class="project-list__item">
+        <div class="project-list__text">
+          <h3>Unreal Engine & Houdini - PCG</h3>
+          <p><!-- EDIT: describe a personal graphics/rendering or creative-coding project -->
+            Procedural Content Generation demo using Unreal Engine, Houdini, and Houdini Engine.</p>
+          <ul class="tag-list">
+            <li>Unreal Engine</li><li>Houdini</li><li>Houdini Engine</li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" type="button" aria-label="Previous image">&lsaquo;</button>
+    <button class="lightbox__next" type="button" aria-label="Next image">&rsaquo;</button>
+    <img class="lightbox__img" src="" alt="">
+    <p class="lightbox__caption"></p>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Jeff Kasunic</p>
+  <p>This website protects your privacy and will never track you. All analytics removed from the universe.</p>
+</footer>
+
+<script src="js/main.js?v=20261111p"></script>
+</body>
+</html>

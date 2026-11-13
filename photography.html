@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photography — Jeff Kasunic</title>
+<meta name="description" content="Photography by Jeff Kasunic.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css?v=20261111p">
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="index.html" class="site-nav__mark">JEFF<span class="dot">.</span></a>
+  <nav class="site-nav__links">
+    <a href="index.html">Home</a>
+    <a href="film-vfx.html">Film &amp; VFX</a>
+    <a href="projects.html">Development</a>
+    <a href="mathematics.html">Mathematics</a>
+    <a href="photography.html" aria-current="page">Photography</a>
+    <a href="music.html">Music</a>
+    <a href="writing.html">Writing</a>
+    <a href="about.html">About</a>
+  </nav>
+  <button class="site-nav__toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <div class="page-head page-head--photo">
+    <h1>Photography</h1>
+    <p>
+      <!-- EDIT: replace with your own line -->
+      Street photography from my travels. Primary camera: Canon EOS 5D Mark III.
+    </p>
+  </div>
+
+  <section class="section section--photo">
+    <div class="photo-tabs" role="group" aria-label="Filter photos by place">
+      <button class="photo-tabs__tab" type="button" data-region="all" aria-pressed="true">All</button>
+      <button class="photo-tabs__tab" type="button" data-region="uk" aria-pressed="false">United Kingdom</button>
+      <button class="photo-tabs__tab" type="button" data-region="europe" aria-pressed="false">Europe</button>
+      <button class="photo-tabs__tab" type="button" data-region="india" aria-pressed="false">India</button>
+      <button class="photo-tabs__tab" type="button" data-region="egypt" aria-pressed="false">Egypt</button>
+      <button class="photo-tabs__tab" type="button" data-region="usa" aria-pressed="false">United States</button>
+      <button class="photo-tabs__tab photo-tabs__tab--end" type="button" data-region="personal" aria-pressed="false">Personal</button>
+    </div>
+    <div class="photo-grid">
+      <!-- EDIT: update each caption and alt text as needed. data-region picks the tab: uk, europe, india, egypt, usa, personal (personal photos also need the hidden attribute) -->
+      <!-- New photo: the grid shows a small copy from assets/photography/thumbs/ (same subfolder and name); the link opens the full-res original. Make a thumb with: sips -Z 1000 -s formatOptions 70 assets/photography/X.jpg --out assets/photography/thumbs/X.jpg -->
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-TrafalgarSquare_03.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-TrafalgarSquare_03.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Trafalgar Square</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-TrafalgarSquare_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-TrafalgarSquare_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Trafalgar Square</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-TrafalgarSquare_02.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-TrafalgarSquare_02.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Trafalgar Square</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="europe">
+        <a class="photo-grid__link" href="assets/photography/Belgium-Brussels.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Belgium-Brussels.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Brussels, Belgium</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-OxfordCircus.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-OxfordCircus.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Oxford Circus</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-Underground.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-Underground.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Underground</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="europe">
+        <a class="photo-grid__link" href="assets/photography/Paris-Montmartre_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Paris-Montmartre_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Paris, Montmartre</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="europe">
+        <a class="photo-grid__link" href="assets/photography/Paris-Montmartre_02.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Paris-Montmartre_02.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Paris, Montmartre</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="europe">
+        <a class="photo-grid__link" href="assets/photography/Paris-Montmartre_03.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Paris-Montmartre_03.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Paris, Montmartre</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="europe">
+        <a class="photo-grid__link" href="assets/photography/Paris-Montmartre_04.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Paris-Montmartre_04.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Paris, Montmartre</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India-AgraFort.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India-AgraFort.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Agra Fort, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/England-Countryside.jpg" target="_blank">
+          <img src="assets/photography/thumbs/England-Countryside.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Countryside, England</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="usa">
+        <a class="photo-grid__link" href="assets/photography/LosAngeles-FarmersMarket.jpg" target="_blank">
+          <img src="assets/photography/thumbs/LosAngeles-FarmersMarket.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Los Angeles, Farmer's Market</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-TrafalgarSquare_04.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-TrafalgarSquare_04.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Trafalgar Square</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-CharingCrossRd.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-CharingCrossRd.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Charing Cross Road</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-Chelsea_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-Chelsea_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Chelsea</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-Chelsea_02.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-Chelsea_02.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Chelsea</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-Chelsea_03.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-Chelsea_03.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Chelsea</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-TowerBridge-Olympics.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-TowerBridge-Olympics.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Tower Bridge during the Olympics</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-ShaftesburyAve.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-ShaftesburyAve.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Shaftesbury Avenue</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-OxfordCircus_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-OxfordCircus_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Oxford Circus</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="europe">
+        <a class="photo-grid__link" href="assets/photography/Paris-SorbonneUniversity.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Paris-SorbonneUniversity.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Paris, Sorbonne</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="europe">
+        <a class="photo-grid__link" href="assets/photography/Paris-CafeDelmas_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Paris-CafeDelmas_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Paris, Café Delmas</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="europe">
+        <a class="photo-grid__link" href="assets/photography/Paris-Pantheon_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Paris-Pantheon_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Paris, Saint-Étienne-du-Mont</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="europe">
+        <a class="photo-grid__link" href="assets/photography/Austria-Vienna.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Austria-Vienna.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Vienna, Austria</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/Edinburgh-Scotland_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Edinburgh-Scotland_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Edinburgh, Scotland</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="uk">
+        <a class="photo-grid__link" href="assets/photography/London-Underground_02.jpg" target="_blank">
+          <img src="assets/photography/thumbs/London-Underground_02.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>London, Underground</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Goa_16.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Goa_16.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Goa_10.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Goa_10.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/Agra-TajMahal_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/Agra-TajMahal_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Agra, Taj Mahal</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/Agra-TajMahal_02.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/Agra-TajMahal_02.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Agra, Taj Mahal</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Mumbai_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Mumbai_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Mumbai, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_11.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_11.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_23.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_23.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Goa_20.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Goa_20.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_14.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_14.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_24.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_24.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_03.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_03.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_10.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_10.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_29.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_29.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_33.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_33.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_36.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_36.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_50.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_50.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Goa_13.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Goa_13.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Goa_17.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Goa_17.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Goa_18.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Goa_18.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Goa_19.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Goa_19.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Goa_11.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Goa_11.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Goa, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="india">
+        <a class="photo-grid__link" href="assets/photography/India/India-Bangalore_26.jpg" target="_blank">
+          <img src="assets/photography/thumbs/India/India-Bangalore_26.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Bangalore, India</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_52.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_52.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_29.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_29.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_35.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_35.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_36.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_36.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Luxor_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Luxor_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Luxor, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_40.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_40.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_20.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_20.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_49.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_49.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_10.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_10.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Luxor_02.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Luxor_02.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Luxor, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Luxor_03.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Luxor_03.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Luxor, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_31.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_31.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_09.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_09.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_32.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_32.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_19.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_19.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_54.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_54.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_07.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_07.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="egypt">
+        <a class="photo-grid__link" href="assets/photography/Egypt/Egypt-Cairo_47.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Egypt/Egypt-Cairo_47.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt</figcaption>
+      </figure>
+      <!-- Photos of me: only in the "Personal" tab, never in All (hidden until that tab is chosen) -->
+      <figure class="photo-grid__item" data-region="personal" hidden>
+        <a class="photo-grid__link" href="assets/photography/Personal/Egypt-Cairo_JDK_03.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Personal/Egypt-Cairo_JDK_03.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Giza, Egypt, 2009</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="personal" hidden>
+        <a class="photo-grid__link" href="assets/photography/Personal/India-Goa_JDK_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Personal/India-Goa_JDK_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Goa, India, 2009</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="personal" hidden>
+        <a class="photo-grid__link" href="assets/photography/Personal/Egypt-Cairo_JDK_07.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Personal/Egypt-Cairo_JDK_07.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt, 2009</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="personal" hidden>
+        <a class="photo-grid__link" href="assets/photography/Personal/Egypt-Cairo_JDK_15.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Personal/Egypt-Cairo_JDK_15.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Cairo, Egypt, 2009</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="personal" hidden>
+        <a class="photo-grid__link" href="assets/photography/Personal/Egypt-Luxor_JDK_01.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Personal/Egypt-Luxor_JDK_01.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>Luxor, Egypt, 2009</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="personal" hidden>
+        <a class="photo-grid__link" href="assets/photography/Personal/India-DreamWorks_JDK_06.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Personal/India-DreamWorks_JDK_06.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>DreamWorks office, Bangalore, India, 2009</figcaption>
+      </figure>
+      <figure class="photo-grid__item" data-region="personal" hidden>
+        <a class="photo-grid__link" href="assets/photography/Personal/India-DreamWorks_JDK_03.jpg" target="_blank">
+          <img src="assets/photography/thumbs/Personal/India-DreamWorks_JDK_03.jpg" alt="" loading="lazy">
+        </a>
+        <figcaption>DreamWorks office, Bangalore, India, 2009</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+    <button class="lightbox__next" type="button" aria-label="Next photo">&rsaquo;</button>
+    <img class="lightbox__img" src="" alt="">
+    <p class="lightbox__caption"></p>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Jeff Kasunic</p>
+  <p>This website protects your privacy and will never track you. All analytics removed from the universe.</p>
+</footer>
+
+<script src="js/main.js?v=20261111p"></script>
+</body>
+</html>

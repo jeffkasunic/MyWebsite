@@ -1,0 +1,30 @@
+# Claude Code / MCP config
+.claude/
+.mcp.json
+CLAUDE.local.md
+
+# IDE (PhpStorm / JetBrains, VS Code)
+.idea/
+.vscode/
+
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment / secrets
+.env
+.env.*
+
+# Node (if you add React or build tools later)
+node_modules/
+dist/
+build/
