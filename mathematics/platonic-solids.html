@@ -1063,29 +1063,29 @@ if (typeof module !== "undefined") module.exports = { polytope, SHAPES };
 <script>
 (function () {
   const DATA3 = [
-    { key: "tetrahedron", c: "--amber", face: "tri", name: "Tetrahedron", faces: "4 triangles, 3 at each corner", V: 4, E: 6, F: 4, sym: "{3,3}", dual: "Self-dual" },
-    { key: "cube", c: "--gold", face: "sq", name: "Cube (hexahedron)", faces: "6 squares, 3 at each corner", V: 8, E: 12, F: 6, sym: "{4,3}", dual: "Dual: octahedron" },
-    { key: "octahedron", c: "--rose", face: "tri", name: "Octahedron", faces: "8 triangles, 4 at each corner", V: 6, E: 12, F: 8, sym: "{3,4}", dual: "Dual: cube" },
-    { key: "dodecahedron", c: "--teal", face: "pent", name: "Dodecahedron", faces: "12 pentagons, 3 at each corner", V: 20, E: 30, F: 12, sym: "{5,3}", dual: "Dual: icosahedron" },
-    { key: "icosahedron", c: "--cyan", face: "tri", name: "Icosahedron", faces: "20 triangles, 5 at each corner", V: 12, E: 30, F: 20, sym: "{3,5}", dual: "Dual: dodecahedron" },
+    { wiki: "Tetrahedron", key: "tetrahedron", c: "--amber", face: "tri", name: "Tetrahedron", faces: "4 triangles, 3 at each corner", V: 4, E: 6, F: 4, sym: "{3,3}", dual: "Self-dual" },
+    { wiki: "Cube", key: "cube", c: "--gold", face: "sq", name: "Cube (hexahedron)", faces: "6 squares, 3 at each corner", V: 8, E: 12, F: 6, sym: "{4,3}", dual: "Dual: octahedron" },
+    { wiki: "Octahedron", key: "octahedron", c: "--rose", face: "tri", name: "Octahedron", faces: "8 triangles, 4 at each corner", V: 6, E: 12, F: 8, sym: "{3,4}", dual: "Dual: cube" },
+    { wiki: "Dodecahedron", key: "dodecahedron", c: "--teal", face: "pent", name: "Dodecahedron", faces: "12 pentagons, 3 at each corner", V: 20, E: 30, F: 12, sym: "{5,3}", dual: "Dual: icosahedron" },
+    { wiki: "Icosahedron", key: "icosahedron", c: "--cyan", face: "tri", name: "Icosahedron", faces: "20 triangles, 5 at each corner", V: 12, E: 30, F: 20, sym: "{3,5}", dual: "Dual: dodecahedron" },
   ];
   const DATA4 = [
-    { key: "5-cell", c: "--amber", face: "tri", name: "5-cell (pentachoron)", faces: "5 tetrahedral cells", V: 5, E: 10, F: 10, C: 5, sym: "{3,3,3}", dual: "Self-dual", note: "The 4D tetrahedron. Every vertex connects to every other." },
-    { key: "tesseract", c: "--gold", face: "sq", name: "Tesseract (8-cell)", faces: "8 cubic cells", V: 16, E: 32, F: 24, C: 8, sym: "{4,3,3}", dual: "Dual: 16-cell", note: "The 4D cube. Its shadow is the familiar cube within a cube.", link: ["Slice it in Hyperslice", "https://jeffkasunic.com/hyperslice/"] },
-    { key: "16-cell", c: "--rose", face: "tri", name: "16-cell (hexadecachoron)", faces: "16 tetrahedral cells", V: 8, E: 24, F: 32, C: 16, sym: "{3,3,4}", dual: "Dual: tesseract", note: "The 4D octahedron: one point at each end of four perpendicular axes." },
-    { key: "24-cell", c: "--bone", face: "tri", name: "24-cell (icositetrachoron)", faces: "24 octahedral cells", V: 24, E: 96, F: 96, C: 24, sym: "{3,4,3}", dual: "Self-dual", note: "The odd one out. No regular solid like it exists in any other dimension." },
-    { key: "120-cell", c: "--teal", face: "pent", name: "120-cell (hecatonicosachoron)", faces: "120 dodecahedral cells", V: 600, E: 1200, F: 720, C: 120, sym: "{5,3,3}", dual: "Dual: 600-cell", note: "The 4D dodecahedron, with 600 vertices." },
-    { key: "600-cell", c: "--cyan", face: "tri", name: "600-cell (hexacosichoron)", faces: "600 tetrahedral cells", V: 120, E: 720, F: 1200, C: 600, sym: "{3,3,5}", dual: "Dual: 120-cell", note: "The 4D icosahedron. Five tetrahedra wrap around every edge." },
+    { wiki: "5-cell", key: "5-cell", c: "--amber", face: "tri", name: "5-cell (pentachoron)", faces: "5 tetrahedral cells", V: 5, E: 10, F: 10, C: 5, sym: "{3,3,3}", dual: "Self-dual", note: "The 4D tetrahedron. Every vertex connects to every other." },
+    { wiki: "Tesseract", key: "tesseract", c: "--gold", face: "sq", name: "Tesseract (8-cell)", faces: "8 cubic cells", V: 16, E: 32, F: 24, C: 8, sym: "{4,3,3}", dual: "Dual: 16-cell", note: "The 4D cube. Its shadow is the familiar cube within a cube.", link: ["Slice it in Hyperslice", "https://jeffkasunic.com/hyperslice/"] },
+    { wiki: "16-cell", key: "16-cell", c: "--rose", face: "tri", name: "16-cell (hexadecachoron)", faces: "16 tetrahedral cells", V: 8, E: 24, F: 32, C: 16, sym: "{3,3,4}", dual: "Dual: tesseract", note: "The 4D octahedron: one point at each end of four perpendicular axes." },
+    { wiki: "24-cell", key: "24-cell", c: "--bone", face: "tri", name: "24-cell (icositetrachoron)", faces: "24 octahedral cells", V: 24, E: 96, F: 96, C: 24, sym: "{3,4,3}", dual: "Self-dual", note: "The odd one out. No regular solid like it exists in any other dimension." },
+    { wiki: "120-cell", key: "120-cell", c: "--teal", face: "pent", name: "120-cell (hecatonicosachoron)", faces: "120 dodecahedral cells", V: 600, E: 1200, F: 720, C: 120, sym: "{5,3,3}", dual: "Dual: 600-cell", note: "The 4D dodecahedron, with 600 vertices." },
+    { wiki: "600-cell", key: "600-cell", c: "--cyan", face: "tri", name: "600-cell (hexacosichoron)", faces: "600 tetrahedral cells", V: 120, E: 720, F: 1200, C: 600, sym: "{3,3,5}", dual: "Dual: 120-cell", note: "The 4D icosahedron. Five tetrahedra wrap around every edge." },
   ];
   const binom = (n, k) => { let r = 1; for (let i = 1; i <= k; i++) r = r * (n - k + i) / i; return Math.round(r); };
   const DATAN = [
-    { key: "simplex", c: "--amber", face: "tri", name: "n-simplex", faces: "Descends from the tetrahedron", sym: n => "{" + Array(n - 1).fill(3).join(",") + "}",
+    { wiki: "Simplex", key: "simplex", c: "--amber", face: "tri", name: "n-simplex", faces: "Descends from the tetrahedron", sym: n => "{" + Array(n - 1).fill(3).join(",") + "}",
       stats: n => [["V", n + 1], ["E", binom(n + 1, 2)], ["Facets", n + 1]], dual: "Self-dual",
       note: n => "Facets are " + (n - 1) + "D simplices. Every vertex joins every other." },
-    { key: "hypercube", c: "--gold", face: "sq", name: "n-cube (hypercube)", faces: "Descends from the cube", sym: n => "{4," + Array(n - 2).fill(3).join(",") + "}",
+    { wiki: "Hypercube", key: "hypercube", c: "--gold", face: "sq", name: "n-cube (hypercube)", faces: "Descends from the cube", sym: n => "{4," + Array(n - 2).fill(3).join(",") + "}",
       stats: n => [["V", 2 ** n], ["E", n * 2 ** (n - 1)], ["Facets", 2 * n]], dual: "Dual: n-orthoplex",
       note: n => "Facets are " + (n - 1) + "D cubes. Vertices are every corner (±1, …, ±1)." },
-    { key: "cross", c: "--rose", face: "tri", name: "n-orthoplex (cross-polytope)", faces: "Descends from the octahedron", sym: n => "{" + Array(n - 2).fill(3).join(",") + ",4}",
+    { wiki: "Cross-polytope", key: "cross", c: "--rose", face: "tri", name: "n-orthoplex (cross-polytope)", faces: "Descends from the octahedron", sym: n => "{" + Array(n - 2).fill(3).join(",") + ",4}",
       stats: n => [["V", 2 * n], ["E", 2 * n * (n - 1)], ["Facets", 2 ** n]], dual: "Dual: n-cube",
       note: n => "Facets are " + (n - 1) + "D simplices. One vertex at each end of n perpendicular axes." },
   ];
@@ -2417,6 +2417,10 @@ if (typeof module !== "undefined") module.exports = { polytope, SHAPES };
     const dl = el("dl", "stats"); body.appendChild(dl);
     const tags = el("div", "tag-row"); body.appendChild(tags);
     const note = el("div", "note"); body.appendChild(note);
+    if (d.wiki) { // its Wikipedia article, the same one listed under Further reading; always the card's last link
+      const w = el("a", "card-link", "Wikipedia ↗"); w.href = "https://en.wikipedia.org/wiki/" + d.wiki; w.target = "_blank"; w.rel = "noopener";
+      body.appendChild(w);
+    }
     c.appendChild(body); grid.appendChild(c);
     return { canvas, dl, tags, note };
   }
@@ -2462,10 +2466,10 @@ if (typeof module !== "undefined") module.exports = { polytope, SHAPES };
     return { verts: V, edges, faces };
   }
   const DATASTAR = [
-    { base: "icosahedron", k: 1, p: 5, c: "--amber", face: "star", name: "Small stellated dodecahedron", faces: "12 pentagrams, 5 at each corner", V: 12, E: 30, F: 12, sym: "{5/2,5}", dual: "Dual: great dodecahedron", note: "Kepler, 1619. A dodecahedron with a pointed spike rising from each face." },
-    { base: "dodecahedron", k: 3, p: 5, c: "--gold", face: "star", name: "Great stellated dodecahedron", faces: "12 pentagrams, 3 at each corner", V: 20, E: 30, F: 12, sym: "{5/2,3}", dual: "Dual: great icosahedron", note: "Kepler, 1619. Its 20 points sit on the corners of a dodecahedron." },
-    { base: "icosahedron", k: 0, p: 5, c: "--rose", face: "pent", name: "Great dodecahedron", faces: "12 pentagons, 5 winding twice around each corner", V: 12, E: 30, F: 12, sym: "{5,5/2}", dual: "Dual: small stellated dodecahedron", note: "Poinsot, 1809. Same corners and edges as the icosahedron, but its pentagons cut through each other." },
-    { base: "icosahedron", k: 1, p: 3, c: "--cyan", face: "tri", name: "Great icosahedron", faces: "20 triangles, 5 winding twice around each corner", V: 12, E: 30, F: 20, sym: "{3,5/2}", dual: "Dual: great stellated dodecahedron", note: "Poinsot, 1809. Same corners and edges as the small stellated dodecahedron, but with triangles for faces." },
+    { base: "icosahedron", k: 1, p: 5, c: "--amber", face: "star", wiki: "Small_stellated_dodecahedron", name: "Small stellated dodecahedron", faces: "12 pentagrams, 5 at each corner", V: 12, E: 30, F: 12, sym: "{5/2,5}", dual: "Dual: great dodecahedron", note: "Kepler, 1619. A dodecahedron with a pointed spike rising from each face." },
+    { base: "dodecahedron", k: 3, p: 5, c: "--gold", face: "star", wiki: "Great_stellated_dodecahedron", name: "Great stellated dodecahedron", faces: "12 pentagrams, 3 at each corner", V: 20, E: 30, F: 12, sym: "{5/2,3}", dual: "Dual: great icosahedron", note: "Kepler, 1619. Its 20 points sit on the corners of a dodecahedron." },
+    { base: "icosahedron", k: 0, p: 5, c: "--rose", face: "pent", wiki: "Great_dodecahedron", name: "Great dodecahedron", faces: "12 pentagons, 5 winding twice around each corner", V: 12, E: 30, F: 12, sym: "{5,5/2}", dual: "Dual: small stellated dodecahedron", note: "Poinsot, 1809. Same corners and edges as the icosahedron, but its pentagons cut through each other." },
+    { base: "icosahedron", k: 1, p: 3, c: "--cyan", face: "tri", wiki: "Great_icosahedron", name: "Great icosahedron", faces: "20 triangles, 5 winding twice around each corner", V: 12, E: 30, F: 20, sym: "{3,5/2}", dual: "Dual: great stellated dodecahedron", note: "Poinsot, 1809. Same corners and edges as the small stellated dodecahedron, but with triangles for faces." },
   ];
   const gS = document.getElementById("gridStar");
   DATASTAR.forEach(d => {
