@@ -1380,53 +1380,12 @@ button:focus-visible {
   border-image: linear-gradient(to right, transparent, var(--amber-dim), var(--cyan), transparent) 1;
 }
 
-/* Mathematics: idea cards that alternate the two lights, numbered like the music tracks */
-.section--math-ideas { --accent: var(--amber); }
-/* The intro ends on a lead-in line ("A few of the ideas..."), so keep the cards close */
-.section__head:has(+ .math-ideas) { margin-bottom: var(--space-3); }
 /* Mathematics: intros (and the lone project text that continues them) run wider
    than other intros, so they don't read as narrow blocks */
-.section--math-ideas .section__intro,
 .section__head:has(+ .project-list--single) .section__intro,
 .project-list--single .project-list__text p { max-width: 50rem; }
 .section__intro a { color: var(--bone); border-bottom: 1px solid var(--accent); }
 .section__intro a:hover { color: var(--accent); }
-.math-ideas {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: var(--space-3);
-  counter-reset: idea;
-}
-.math-idea {
-  padding: var(--space-3);
-  border-top: 2px solid var(--accent);
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 14%, var(--panel)), var(--panel) 65%);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.math-idea:nth-child(even) { --accent: var(--cyan); }
-.math-idea:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0.9rem 1.75rem rgba(0, 0, 0, 0.5);
-}
-@media (prefers-reduced-motion: reduce) {
-  .math-idea:hover { transform: none; }
-}
-.math-idea h3 {
-  counter-increment: idea;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: var(--space-1);
-}
-.math-idea h3::before {
-  content: counter(idea, decimal-leading-zero);
-  color: var(--accent);
-  font-size: 0.8rem;
-  font-variant-numeric: tabular-nums;
-  margin-right: 0.75em;
-}
-.math-idea p { font-size: 0.95rem; }
 
 /* Mathematics: inspiration links, grouped by kind (video / paper / site).
    Plain links only, so the page still makes no third-party requests. */
