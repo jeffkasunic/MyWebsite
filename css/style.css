@@ -286,6 +286,8 @@ button:focus-visible {
 }
 .section__intro { max-width: 34rem; }
 .section__intro + .section__intro { margin-top: var(--space-2); }
+/* A label placed under a heading (subheading) hugs the heading */
+.section__head h2:has(+ .section__eyebrow) { margin-bottom: 0.4rem; }
 /* ==========================================================================
    Film & VFX
    ========================================================================== */
@@ -674,6 +676,8 @@ button:focus-visible {
 .project-list__item:last-child { border-bottom: 1px solid var(--hairline); }
 /* A lone project (Mathematics) needs no dividers around it */
 .project-list--single .project-list__item { border-top: none; border-bottom: none; }
+/* No rule between a section intro and its first project (Generative AI) */
+.project-list--no-divider > .project-list__item:first-child { border-top: none; }
 
 .project-list__head {
   display: flex;
