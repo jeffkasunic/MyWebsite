@@ -676,8 +676,8 @@ button:focus-visible {
 .project-list__item:last-child { border-bottom: 1px solid var(--hairline); }
 /* A lone project (Mathematics) needs no dividers around it */
 .project-list--single .project-list__item { border-top: none; border-bottom: none; }
-/* No rule between a section intro and its first project (Generative AI) */
-.project-list--no-divider > .project-list__item:first-child { border-top: none; }
+/* No rules above or below the projects (Generative AI) */
+.project-list--no-divider > .project-list__item { border-top: none; border-bottom: none; }
 
 .project-list__head {
   display: flex;
