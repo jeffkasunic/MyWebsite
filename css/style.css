@@ -912,8 +912,10 @@ button:focus-visible {
   letter-spacing: -0.02em;
 }
 .page-head p { margin-top: var(--space-2); font-size: 1.05rem; }
-.page-head p a { color: var(--bone); border-bottom: 1px solid var(--amber); }
-.page-head p a:hover { color: var(--amber); }
+.page-head p a,
+.about__body p a { color: var(--bone); border-bottom: 1px solid var(--amber); }
+.page-head p a:hover,
+.about__body p a:hover { color: var(--amber); }
 
 /* A soft pool of light behind each page title, plus a small motif under it
    that hints at the page's subject */
